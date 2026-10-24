@@ -1,0 +1,2144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5d4a78a4737d72dd836e03b97533fc3a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iso8601-js-period@0.2.1/iso8601.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.control.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_5d4a78a4737d72dd836e03b97533fc3a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_5d4a78a4737d72dd836e03b97533fc3a = L.map(
+                "map_5d4a78a4737d72dd836e03b97533fc3a",
+                {
+                    center: [48.4890681580791, 37.79796695746099],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_5d4a78a4737d72dd836e03b97533fc3a);
+
+            
+
+        
+    
+            var tile_layer_3b8aaaf958cce74e9f461ede856dbab9 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_3b8aaaf958cce74e9f461ede856dbab9.addTo(map_5d4a78a4737d72dd836e03b97533fc3a);
+        
+    
+            var feature_group_289982e1db67098c19132c5de99ef4a7 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_384d902c6095bf8af36d313a37fbecf5 = L.marker(
+                [48.52483570765056, 37.851692660599674],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_fe6dec0ff0be76638d53d605a4e24350 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "bomb",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_715426116d5df2d54a315142ac8dc4f3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9b9be9c2afc0141989a360164c2722c7 = $(`<div id="html_9b9be9c2afc0141989a360164c2722c7" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1000</h4>         <b>Час:</b> 2026-10-23 06:00:00<br>         <b>Тип:</b> Авіаудар<br>         <b>Інтенсивність:</b> Середня<br>         <b>Пошкодження:</b> Ні     </div>     </div>`)[0];
+                popup_715426116d5df2d54a315142ac8dc4f3.setContent(html_9b9be9c2afc0141989a360164c2722c7);
+            
+        
+
+        marker_384d902c6095bf8af36d313a37fbecf5.bindPopup(popup_715426116d5df2d54a315142ac8dc4f3)
+        ;
+
+        
+    
+    
+            marker_384d902c6095bf8af36d313a37fbecf5.bindTooltip(
+                `<div>
+                     Авіаудар (Середня)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_384d902c6095bf8af36d313a37fbecf5.setIcon(icon_fe6dec0ff0be76638d53d605a4e24350);
+            
+    
+            var marker_0d81f5ae3e6e7979ef0cc007d120cfb9 = L.marker(
+                [48.49308678494144, 37.81199577968329],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_701d8fa7e34707e2ae4e76e03bf3a1fe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_460dadb460cc6acc328b0316bab34062 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_36f5e1caed7e42316485486928717375 = $(`<div id="html_36f5e1caed7e42316485486928717375" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1001</h4>         <b>Час:</b> 2026-10-23 06:30:00<br>         <b>Тип:</b> Артилерійський обстріл<br>         <b>Інтенсивність:</b> Низька<br>         <b>Пошкодження:</b> Частково     </div>     </div>`)[0];
+                popup_460dadb460cc6acc328b0316bab34062.setContent(html_36f5e1caed7e42316485486928717375);
+            
+        
+
+        marker_0d81f5ae3e6e7979ef0cc007d120cfb9.bindPopup(popup_460dadb460cc6acc328b0316bab34062)
+        ;
+
+        
+    
+    
+            marker_0d81f5ae3e6e7979ef0cc007d120cfb9.bindTooltip(
+                `<div>
+                     Артилерійський обстріл (Низька)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0d81f5ae3e6e7979ef0cc007d120cfb9.setIcon(icon_701d8fa7e34707e2ae4e76e03bf3a1fe);
+            
+    
+            var marker_25eafc5b5b93dff1b8ca51ff79634444 = L.marker(
+                [48.53238442690503, 37.79190462023282],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_1c75b47415ea423499396a9b5bfa0a55 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plane",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9429444b979acaaa20a70d07496485a3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_aa4ce462c23e28ee9bfc5a95634cf786 = $(`<div id="html_aa4ce462c23e28ee9bfc5a95634cf786" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1002</h4>         <b>Час:</b> 2026-10-23 07:00:00<br>         <b>Тип:</b> Удар FPV-дрона<br>         <b>Інтенсивність:</b> Висока<br>         <b>Пошкодження:</b> Так     </div>     </div>`)[0];
+                popup_9429444b979acaaa20a70d07496485a3.setContent(html_aa4ce462c23e28ee9bfc5a95634cf786);
+            
+        
+
+        marker_25eafc5b5b93dff1b8ca51ff79634444.bindPopup(popup_9429444b979acaaa20a70d07496485a3)
+        ;
+
+        
+    
+    
+            marker_25eafc5b5b93dff1b8ca51ff79634444.bindTooltip(
+                `<div>
+                     Удар FPV-дрона (Висока)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_25eafc5b5b93dff1b8ca51ff79634444.setIcon(icon_1c75b47415ea423499396a9b5bfa0a55);
+            
+    
+            var marker_90f5fd8699acabfe2cd1a4d13c725a02 = L.marker(
+                [48.5761514928204, 37.77892274130875],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_2ec4b51b9ad3310c2a2168ed4a33ee93 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shield-halved",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2d31136c6a163da8a8a30d1e4c3d64a5 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d1011cc559a7ee520c10ea6ae952af24 = $(`<div id="html_d1011cc559a7ee520c10ea6ae952af24" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1003</h4>         <b>Час:</b> 2026-10-23 07:30:00<br>         <b>Тип:</b> Стрілецький бій<br>         <b>Інтенсивність:</b> Середня<br>         <b>Пошкодження:</b> Частково     </div>     </div>`)[0];
+                popup_2d31136c6a163da8a8a30d1e4c3d64a5.setContent(html_d1011cc559a7ee520c10ea6ae952af24);
+            
+        
+
+        marker_90f5fd8699acabfe2cd1a4d13c725a02.bindPopup(popup_2d31136c6a163da8a8a30d1e4c3d64a5)
+        ;
+
+        
+    
+    
+            marker_90f5fd8699acabfe2cd1a4d13c725a02.bindTooltip(
+                `<div>
+                     Стрілецький бій (Середня)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_90f5fd8699acabfe2cd1a4d13c725a02.setIcon(icon_2ec4b51b9ad3310c2a2168ed4a33ee93);
+            
+    
+            var marker_66b6b8b58616287f1a8e9ff53d29a79f = L.marker(
+                [48.488292331263835, 37.69650346067428],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_dc2e5a18e74609fa37bc2dd0c61440cc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1601ac90155c0415e685757cda3eecfb = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f18eed9a6f02f0cec49670a7d59a05e0 = $(`<div id="html_f18eed9a6f02f0cec49670a7d59a05e0" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1004</h4>         <b>Час:</b> 2026-10-23 08:00:00<br>         <b>Тип:</b> Артилерійський обстріл<br>         <b>Інтенсивність:</b> Низька<br>         <b>Пошкодження:</b> Частково     </div>     </div>`)[0];
+                popup_1601ac90155c0415e685757cda3eecfb.setContent(html_f18eed9a6f02f0cec49670a7d59a05e0);
+            
+        
+
+        marker_66b6b8b58616287f1a8e9ff53d29a79f.bindPopup(popup_1601ac90155c0415e685757cda3eecfb)
+        ;
+
+        
+    
+    
+            marker_66b6b8b58616287f1a8e9ff53d29a79f.bindTooltip(
+                `<div>
+                     Артилерійський обстріл (Низька)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_66b6b8b58616287f1a8e9ff53d29a79f.setIcon(icon_dc2e5a18e74609fa37bc2dd0c61440cc);
+            
+    
+            var marker_f4fbfa70671b8a18cb38bacafe058aad = L.marker(
+                [48.48829315215254, 37.74961090541237],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_d08628710fd355ce7ac3bedb6a468c76 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e870b7dfa0a4bbeeecedbaada09c6099 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_74091e5e7672dca195b2a607b63996d2 = $(`<div id="html_74091e5e7672dca195b2a607b63996d2" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1005</h4>         <b>Час:</b> 2026-10-23 08:30:00<br>         <b>Тип:</b> Артилерійський обстріл<br>         <b>Інтенсивність:</b> Середня<br>         <b>Пошкодження:</b> Ні     </div>     </div>`)[0];
+                popup_e870b7dfa0a4bbeeecedbaada09c6099.setContent(html_74091e5e7672dca195b2a607b63996d2);
+            
+        
+
+        marker_f4fbfa70671b8a18cb38bacafe058aad.bindPopup(popup_e870b7dfa0a4bbeeecedbaada09c6099)
+        ;
+
+        
+    
+    
+            marker_f4fbfa70671b8a18cb38bacafe058aad.bindTooltip(
+                `<div>
+                     Артилерійський обстріл (Середня)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f4fbfa70671b8a18cb38bacafe058aad.setIcon(icon_d08628710fd355ce7ac3bedb6a468c76);
+            
+    
+            var marker_deea380208beaefb4ca9fc7d2e13a357 = L.marker(
+                [48.57896064077537, 37.76775528603281],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_9137d127a21826307464761945b823cf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fb2fb6c6cbcdb24170da7839ca4f0411 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9b3962f1abe82b46cbc8c0d38f2e2f07 = $(`<div id="html_9b3962f1abe82b46cbc8c0d38f2e2f07" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1006</h4>         <b>Час:</b> 2026-10-23 09:00:00<br>         <b>Тип:</b> Артилерійський обстріл<br>         <b>Інтенсивність:</b> Критична<br>         <b>Пошкодження:</b> Ні     </div>     </div>`)[0];
+                popup_fb2fb6c6cbcdb24170da7839ca4f0411.setContent(html_9b3962f1abe82b46cbc8c0d38f2e2f07);
+            
+        
+
+        marker_deea380208beaefb4ca9fc7d2e13a357.bindPopup(popup_fb2fb6c6cbcdb24170da7839ca4f0411)
+        ;
+
+        
+    
+    
+            marker_deea380208beaefb4ca9fc7d2e13a357.bindTooltip(
+                `<div>
+                     Артилерійський обстріл (Критична)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_deea380208beaefb4ca9fc7d2e13a357.setIcon(icon_9137d127a21826307464761945b823cf);
+            
+    
+            var marker_dc4c4ee08607806a9b94fc290706cf58 = L.marker(
+                [48.53837173645765, 37.87399855583532],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_1d9025123f6bac3cadb437f3250c88eb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c31d7470cc5127ce11c237290aa440b2 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_51ea4a6a01f30c1e1aa2fd0395204a98 = $(`<div id="html_51ea4a6a01f30c1e1aa2fd0395204a98" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1007</h4>         <b>Час:</b> 2026-10-23 09:30:00<br>         <b>Тип:</b> Артилерійський обстріл<br>         <b>Інтенсивність:</b> Середня<br>         <b>Пошкодження:</b> Так     </div>     </div>`)[0];
+                popup_c31d7470cc5127ce11c237290aa440b2.setContent(html_51ea4a6a01f30c1e1aa2fd0395204a98);
+            
+        
+
+        marker_dc4c4ee08607806a9b94fc290706cf58.bindPopup(popup_c31d7470cc5127ce11c237290aa440b2)
+        ;
+
+        
+    
+    
+            marker_dc4c4ee08607806a9b94fc290706cf58.bindTooltip(
+                `<div>
+                     Артилерійський обстріл (Середня)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dc4c4ee08607806a9b94fc290706cf58.setIcon(icon_1d9025123f6bac3cadb437f3250c88eb);
+            
+    
+            var marker_3dbbfe12a56d74a303c51d1cd90be825 = L.marker(
+                [48.476526280703254, 37.82405328026979],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_e22ef2b4cdf6a9bfc3c75aba8c6011ac = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "bomb",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c40069b48cc6243aa0987bd483d5951e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_282630c5b80131c11ed343dd46958c1e = $(`<div id="html_282630c5b80131c11ed343dd46958c1e" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1008</h4>         <b>Час:</b> 2026-10-23 10:00:00<br>         <b>Тип:</b> Авіаудар<br>         <b>Інтенсивність:</b> Низька<br>         <b>Пошкодження:</b> Так     </div>     </div>`)[0];
+                popup_c40069b48cc6243aa0987bd483d5951e.setContent(html_282630c5b80131c11ed343dd46958c1e);
+            
+        
+
+        marker_3dbbfe12a56d74a303c51d1cd90be825.bindPopup(popup_c40069b48cc6243aa0987bd483d5951e)
+        ;
+
+        
+    
+    
+            marker_3dbbfe12a56d74a303c51d1cd90be825.bindTooltip(
+                `<div>
+                     Авіаудар (Низька)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3dbbfe12a56d74a303c51d1cd90be825.setIcon(icon_e22ef2b4cdf6a9bfc3c75aba8c6011ac);
+            
+    
+            var marker_31e9d923c3eec8cbd94b7fe93d72461b = L.marker(
+                [48.527128002179296, 37.676587189124604],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_ea77b149999198fbcdd913cadd064c08 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shield-halved",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_59d904da2735a46408a84d69eb13ae86 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_825b8f892481684b988bac4ff450a2f4 = $(`<div id="html_825b8f892481684b988bac4ff450a2f4" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1009</h4>         <b>Час:</b> 2026-10-23 10:30:00<br>         <b>Тип:</b> Стрілецький бій<br>         <b>Інтенсивність:</b> Середня<br>         <b>Пошкодження:</b> Частково     </div>     </div>`)[0];
+                popup_59d904da2735a46408a84d69eb13ae86.setContent(html_825b8f892481684b988bac4ff450a2f4);
+            
+        
+
+        marker_31e9d923c3eec8cbd94b7fe93d72461b.bindPopup(popup_59d904da2735a46408a84d69eb13ae86)
+        ;
+
+        
+    
+    
+            marker_31e9d923c3eec8cbd94b7fe93d72461b.bindTooltip(
+                `<div>
+                     Стрілецький бій (Середня)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_31e9d923c3eec8cbd94b7fe93d72461b.setIcon(icon_ea77b149999198fbcdd913cadd064c08);
+            
+    
+            var marker_077822140024f1b13f182b4a71adae63 = L.marker(
+                [48.47682911535938, 37.82268587785763],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_30c177b3d560369dd521722624c0e5b6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plane",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9ed64d3ee049626f78dd589c26e875c4 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_aa85d0c309448a688010bc9cef803297 = $(`<div id="html_aa85d0c309448a688010bc9cef803297" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1010</h4>         <b>Час:</b> 2026-10-23 11:00:00<br>         <b>Тип:</b> Удар FPV-дрона<br>         <b>Інтенсивність:</b> Критична<br>         <b>Пошкодження:</b> Ні     </div>     </div>`)[0];
+                popup_9ed64d3ee049626f78dd589c26e875c4.setContent(html_aa85d0c309448a688010bc9cef803297);
+            
+        
+
+        marker_077822140024f1b13f182b4a71adae63.bindPopup(popup_9ed64d3ee049626f78dd589c26e875c4)
+        ;
+
+        
+    
+    
+            marker_077822140024f1b13f182b4a71adae63.bindTooltip(
+                `<div>
+                     Удар FPV-дрона (Критична)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_077822140024f1b13f182b4a71adae63.setIcon(icon_30c177b3d560369dd521722624c0e5b6);
+            
+    
+            var marker_7b723f9819ffc21b9bb8801b9667a010 = L.marker(
+                [48.47671351232149, 37.77304424037086],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_44acbd96dcda683c84162bab323c5da3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shield-halved",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_54cbb2236053f0a75dd7d3668d3c1619 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7f9c696921d97554b0b557c3a9bedc83 = $(`<div id="html_7f9c696921d97554b0b557c3a9bedc83" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1011</h4>         <b>Час:</b> 2026-10-23 11:30:00<br>         <b>Тип:</b> Стрілецький бій<br>         <b>Інтенсивність:</b> Середня<br>         <b>Пошкодження:</b> Ні     </div>     </div>`)[0];
+                popup_54cbb2236053f0a75dd7d3668d3c1619.setContent(html_7f9c696921d97554b0b557c3a9bedc83);
+            
+        
+
+        marker_7b723f9819ffc21b9bb8801b9667a010.bindPopup(popup_54cbb2236053f0a75dd7d3668d3c1619)
+        ;
+
+        
+    
+    
+            marker_7b723f9819ffc21b9bb8801b9667a010.bindTooltip(
+                `<div>
+                     Стрілецький бій (Середня)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7b723f9819ffc21b9bb8801b9667a010.setIcon(icon_44acbd96dcda683c84162bab323c5da3);
+            
+    
+            var marker_cee863c928a649c55d36d9d18176e99f = L.marker(
+                [48.512098113578304, 37.75261545997858],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_dde481b52d73b289ca8f53489b79bb32 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shield-halved",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_acf464b82380ea21ac1bb339f3590e67 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a16127f4a25dd2ee8e1e19504ecc0e1e = $(`<div id="html_a16127f4a25dd2ee8e1e19504ecc0e1e" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1012</h4>         <b>Час:</b> 2026-10-23 12:00:00<br>         <b>Тип:</b> Стрілецький бій<br>         <b>Інтенсивність:</b> Висока<br>         <b>Пошкодження:</b> Частково     </div>     </div>`)[0];
+                popup_acf464b82380ea21ac1bb339f3590e67.setContent(html_a16127f4a25dd2ee8e1e19504ecc0e1e);
+            
+        
+
+        marker_cee863c928a649c55d36d9d18176e99f.bindPopup(popup_acf464b82380ea21ac1bb339f3590e67)
+        ;
+
+        
+    
+    
+            marker_cee863c928a649c55d36d9d18176e99f.bindTooltip(
+                `<div>
+                     Стрілецький бій (Висока)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cee863c928a649c55d36d9d18176e99f.setIcon(icon_dde481b52d73b289ca8f53489b79bb32);
+            
+    
+            var marker_282aa9802f0fc998838f82651114d214 = L.marker(
+                [48.40433598776711, 37.84281734021886],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_1756d02d4fec03cce29de4e8666480c9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_efc4c1d1a542295cbdf434544cc45648 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_473ce64c84a7bfd439a8314daea52ee3 = $(`<div id="html_473ce64c84a7bfd439a8314daea52ee3" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1013</h4>         <b>Час:</b> 2026-10-23 12:30:00<br>         <b>Тип:</b> Артилерійський обстріл<br>         <b>Інтенсивність:</b> Висока<br>         <b>Пошкодження:</b> Так     </div>     </div>`)[0];
+                popup_efc4c1d1a542295cbdf434544cc45648.setContent(html_473ce64c84a7bfd439a8314daea52ee3);
+            
+        
+
+        marker_282aa9802f0fc998838f82651114d214.bindPopup(popup_efc4c1d1a542295cbdf434544cc45648)
+        ;
+
+        
+    
+    
+            marker_282aa9802f0fc998838f82651114d214.bindTooltip(
+                `<div>
+                     Артилерійський обстріл (Висока)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_282aa9802f0fc998838f82651114d214.setIcon(icon_1756d02d4fec03cce29de4e8666480c9);
+            
+    
+            var marker_7de81aebbab65b77bdc19c61d43c30a8 = L.marker(
+                [48.41375410837435, 37.87216996657472],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_97e1fefe6ad83a0b5d339146aae9ba47 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shield-halved",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_829db54ea47a346093773d02d94f617f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f9048d13e01fd07b83e839b7ee03a1f9 = $(`<div id="html_f9048d13e01fd07b83e839b7ee03a1f9" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1014</h4>         <b>Час:</b> 2026-10-23 13:00:00<br>         <b>Тип:</b> Стрілецький бій<br>         <b>Інтенсивність:</b> Середня<br>         <b>Пошкодження:</b> Так     </div>     </div>`)[0];
+                popup_829db54ea47a346093773d02d94f617f.setContent(html_f9048d13e01fd07b83e839b7ee03a1f9);
+            
+        
+
+        marker_7de81aebbab65b77bdc19c61d43c30a8.bindPopup(popup_829db54ea47a346093773d02d94f617f)
+        ;
+
+        
+    
+    
+            marker_7de81aebbab65b77bdc19c61d43c30a8.bindTooltip(
+                `<div>
+                     Стрілецький бій (Середня)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7de81aebbab65b77bdc19c61d43c30a8.setIcon(icon_97e1fefe6ad83a0b5d339146aae9ba47);
+            
+    
+            var marker_2f9dd8e200e62edd92607494ef3867e0 = L.marker(
+                [48.47188562353795, 37.865189608338135],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_b9c2d6cb0d3e6d8f77508b602366c856 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plane",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e33bfcf3d38c13d0bf64ed8a5adfb181 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_75ed2fb8d9b922b3615310ba70684a99 = $(`<div id="html_75ed2fb8d9b922b3615310ba70684a99" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1015</h4>         <b>Час:</b> 2026-10-23 13:30:00<br>         <b>Тип:</b> Удар FPV-дрона<br>         <b>Інтенсивність:</b> Висока<br>         <b>Пошкодження:</b> Частково     </div>     </div>`)[0];
+                popup_e33bfcf3d38c13d0bf64ed8a5adfb181.setContent(html_75ed2fb8d9b922b3615310ba70684a99);
+            
+        
+
+        marker_2f9dd8e200e62edd92607494ef3867e0.bindPopup(popup_e33bfcf3d38c13d0bf64ed8a5adfb181)
+        ;
+
+        
+    
+    
+            marker_2f9dd8e200e62edd92607494ef3867e0.bindTooltip(
+                `<div>
+                     Удар FPV-дрона (Висока)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2f9dd8e200e62edd92607494ef3867e0.setIcon(icon_b9c2d6cb0d3e6d8f77508b602366c856);
+            
+    
+            var marker_5dec2c57b368628985145bb15eb98fe3 = L.marker(
+                [48.44935844398328, 37.741254773374415],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_33ef6ecdaba8175ad737580ff9511c65 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shield-halved",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_81bf0418e0e63a8d2b9eac8bea5c36df = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_cdfe92a5440310b2bbb3e21a36b34e81 = $(`<div id="html_cdfe92a5440310b2bbb3e21a36b34e81" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1016</h4>         <b>Час:</b> 2026-10-23 14:00:00<br>         <b>Тип:</b> Стрілецький бій<br>         <b>Інтенсивність:</b> Середня<br>         <b>Пошкодження:</b> Частково     </div>     </div>`)[0];
+                popup_81bf0418e0e63a8d2b9eac8bea5c36df.setContent(html_cdfe92a5440310b2bbb3e21a36b34e81);
+            
+        
+
+        marker_5dec2c57b368628985145bb15eb98fe3.bindPopup(popup_81bf0418e0e63a8d2b9eac8bea5c36df)
+        ;
+
+        
+    
+    
+            marker_5dec2c57b368628985145bb15eb98fe3.bindTooltip(
+                `<div>
+                     Стрілецький бій (Середня)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5dec2c57b368628985145bb15eb98fe3.setIcon(icon_33ef6ecdaba8175ad737580ff9511c65);
+            
+    
+            var marker_2bf84d1b1a1a42832bb77747ab4176cb = L.marker(
+                [48.515712366629764, 37.77835513369041],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_7ddb8de9f42b778ffa0db9390bb00308 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shield-halved",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_01e5dd12251277280aae56c99d6722de = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_382d96162c5ec0965e20c95b1169ab51 = $(`<div id="html_382d96162c5ec0965e20c95b1169ab51" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1017</h4>         <b>Час:</b> 2026-10-23 14:30:00<br>         <b>Тип:</b> Стрілецький бій<br>         <b>Інтенсивність:</b> Висока<br>         <b>Пошкодження:</b> Ні     </div>     </div>`)[0];
+                popup_01e5dd12251277280aae56c99d6722de.setContent(html_382d96162c5ec0965e20c95b1169ab51);
+            
+        
+
+        marker_2bf84d1b1a1a42832bb77747ab4176cb.bindPopup(popup_01e5dd12251277280aae56c99d6722de)
+        ;
+
+        
+    
+    
+            marker_2bf84d1b1a1a42832bb77747ab4176cb.bindTooltip(
+                `<div>
+                     Стрілецький бій (Висока)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2bf84d1b1a1a42832bb77747ab4176cb.setIcon(icon_7ddb8de9f42b778ffa0db9390bb00308);
+            
+    
+            var marker_b70ceed3c2fcdfc608043e58f10f9207 = L.marker(
+                [48.45459879622394, 37.823188440198244],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_d22bc41a3e981ce8ea8d32b8e21d1a53 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f8a3feeec75bd4f43dbf9cd4440c9c29 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8fa7efce35281ff06a6d00ee3174144d = $(`<div id="html_8fa7efce35281ff06a6d00ee3174144d" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1018</h4>         <b>Час:</b> 2026-10-23 15:00:00<br>         <b>Тип:</b> Артилерійський обстріл<br>         <b>Інтенсивність:</b> Висока<br>         <b>Пошкодження:</b> Ні     </div>     </div>`)[0];
+                popup_f8a3feeec75bd4f43dbf9cd4440c9c29.setContent(html_8fa7efce35281ff06a6d00ee3174144d);
+            
+        
+
+        marker_b70ceed3c2fcdfc608043e58f10f9207.bindPopup(popup_f8a3feeec75bd4f43dbf9cd4440c9c29)
+        ;
+
+        
+    
+    
+            marker_b70ceed3c2fcdfc608043e58f10f9207.bindTooltip(
+                `<div>
+                     Артилерійський обстріл (Висока)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b70ceed3c2fcdfc608043e58f10f9207.setIcon(icon_d22bc41a3e981ce8ea8d32b8e21d1a53);
+            
+    
+            var marker_125ad55d649b862511058e40862760d3 = L.marker(
+                [48.429384814933236, 37.868288158898565],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_02a87df56bc9307b9d1de1259288950c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_56af557b6adffffba91d4e4a5363e771 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_198796c7556e7b5674b8a04e4845b387 = $(`<div id="html_198796c7556e7b5674b8a04e4845b387" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1019</h4>         <b>Час:</b> 2026-10-23 15:30:00<br>         <b>Тип:</b> Артилерійський обстріл<br>         <b>Інтенсивність:</b> Середня<br>         <b>Пошкодження:</b> Так     </div>     </div>`)[0];
+                popup_56af557b6adffffba91d4e4a5363e771.setContent(html_198796c7556e7b5674b8a04e4845b387);
+            
+        
+
+        marker_125ad55d649b862511058e40862760d3.bindPopup(popup_56af557b6adffffba91d4e4a5363e771)
+        ;
+
+        
+    
+    
+            marker_125ad55d649b862511058e40862760d3.bindTooltip(
+                `<div>
+                     Артилерійський обстріл (Середня)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_125ad55d649b862511058e40862760d3.setIcon(icon_02a87df56bc9307b9d1de1259288950c);
+            
+    
+            var marker_362ec43d80ef4f5bdca2800da0875b7a = L.marker(
+                [48.57328243844608, 37.766457803350825],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_978d6e9b1ea44ab3bb5cb4e8da51620b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d8d56d1e7d7c80ba06601eee06761831 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_dd16167aac856be2362d856f7fdd2127 = $(`<div id="html_dd16167aac856be2362d856f7fdd2127" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1020</h4>         <b>Час:</b> 2026-10-23 16:00:00<br>         <b>Тип:</b> Артилерійський обстріл<br>         <b>Інтенсивність:</b> Низька<br>         <b>Пошкодження:</b> Частково     </div>     </div>`)[0];
+                popup_d8d56d1e7d7c80ba06601eee06761831.setContent(html_dd16167aac856be2362d856f7fdd2127);
+            
+        
+
+        marker_362ec43d80ef4f5bdca2800da0875b7a.bindPopup(popup_d8d56d1e7d7c80ba06601eee06761831)
+        ;
+
+        
+    
+    
+            marker_362ec43d80ef4f5bdca2800da0875b7a.bindTooltip(
+                `<div>
+                     Артилерійський обстріл (Низька)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_362ec43d80ef4f5bdca2800da0875b7a.setIcon(icon_978d6e9b1ea44ab3bb5cb4e8da51620b);
+            
+    
+            var marker_90fae3ba82f60ea57c7c184bfe45d5cb = L.marker(
+                [48.48871118497567, 37.78700387163353],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_0e94e0a4829b04a94993934d53ae02f7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plane",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_00ed76fa74561a03d464384890a9cd55 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8e8df9bb5796fe1a0ef85b89fcf2d202 = $(`<div id="html_8e8df9bb5796fe1a0ef85b89fcf2d202" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1021</h4>         <b>Час:</b> 2026-10-23 16:30:00<br>         <b>Тип:</b> Удар FPV-дрона<br>         <b>Інтенсивність:</b> Висока<br>         <b>Пошкодження:</b> Ні     </div>     </div>`)[0];
+                popup_00ed76fa74561a03d464384890a9cd55.setContent(html_8e8df9bb5796fe1a0ef85b89fcf2d202);
+            
+        
+
+        marker_90fae3ba82f60ea57c7c184bfe45d5cb.bindPopup(popup_00ed76fa74561a03d464384890a9cd55)
+        ;
+
+        
+    
+    
+            marker_90fae3ba82f60ea57c7c184bfe45d5cb.bindTooltip(
+                `<div>
+                     Удар FPV-дрона (Висока)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_90fae3ba82f60ea57c7c184bfe45d5cb.setIcon(icon_0e94e0a4829b04a94993934d53ae02f7);
+            
+    
+            var marker_9ab3f4271580608d8f7b7c991ce69e44 = L.marker(
+                [48.503376410234395, 37.72255655181957],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_fbdab3de70cbbca9857aed3117481cba = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shield-halved",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d2b08138217e2f679a57d82f37e0540e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a42ef59b5cff1b5f4ae59bc87c1febd7 = $(`<div id="html_a42ef59b5cff1b5f4ae59bc87c1febd7" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1022</h4>         <b>Час:</b> 2026-10-23 17:00:00<br>         <b>Тип:</b> Стрілецький бій<br>         <b>Інтенсивність:</b> Середня<br>         <b>Пошкодження:</b> Ні     </div>     </div>`)[0];
+                popup_d2b08138217e2f679a57d82f37e0540e.setContent(html_a42ef59b5cff1b5f4ae59bc87c1febd7);
+            
+        
+
+        marker_9ab3f4271580608d8f7b7c991ce69e44.bindPopup(popup_d2b08138217e2f679a57d82f37e0540e)
+        ;
+
+        
+    
+    
+            marker_9ab3f4271580608d8f7b7c991ce69e44.bindTooltip(
+                `<div>
+                     Стрілецький бій (Середня)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9ab3f4271580608d8f7b7c991ce69e44.setIcon(icon_fbdab3de70cbbca9857aed3117481cba);
+            
+    
+            var marker_8229467b18c7c9eb439885eba600fcf1 = L.marker(
+                [48.428762590689324, 37.71626553631435],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_17ea6ac0e6fb986c24c9a1fd608519f8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shield-halved",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d0645219a5190f676e8ffc45fbc68c01 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_bf8b25badb910cc0b82fd676189c9357 = $(`<div id="html_bf8b25badb910cc0b82fd676189c9357" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1023</h4>         <b>Час:</b> 2026-10-23 17:30:00<br>         <b>Тип:</b> Стрілецький бій<br>         <b>Інтенсивність:</b> Низька<br>         <b>Пошкодження:</b> Частково     </div>     </div>`)[0];
+                popup_d0645219a5190f676e8ffc45fbc68c01.setContent(html_bf8b25badb910cc0b82fd676189c9357);
+            
+        
+
+        marker_8229467b18c7c9eb439885eba600fcf1.bindPopup(popup_d0645219a5190f676e8ffc45fbc68c01)
+        ;
+
+        
+    
+    
+            marker_8229467b18c7c9eb439885eba600fcf1.bindTooltip(
+                `<div>
+                     Стрілецький бій (Низька)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8229467b18c7c9eb439885eba600fcf1.setIcon(icon_17ea6ac0e6fb986c24c9a1fd608519f8);
+            
+    
+            var marker_7fe8565637dea985d5e9147593bee921 = L.marker(
+                [48.47278086377374, 37.85687680756759],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_bef1b95a76cec10ca2834d2a8f0f6fa6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f73b43b5f3852e719dcb6663e4624eac = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3c2629350e03e9cb6df526ebb175ad50 = $(`<div id="html_3c2629350e03e9cb6df526ebb175ad50" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1024</h4>         <b>Час:</b> 2026-10-23 18:00:00<br>         <b>Тип:</b> Артилерійський обстріл<br>         <b>Інтенсивність:</b> Низька<br>         <b>Пошкодження:</b> Ні     </div>     </div>`)[0];
+                popup_f73b43b5f3852e719dcb6663e4624eac.setContent(html_3c2629350e03e9cb6df526ebb175ad50);
+            
+        
+
+        marker_7fe8565637dea985d5e9147593bee921.bindPopup(popup_f73b43b5f3852e719dcb6663e4624eac)
+        ;
+
+        
+    
+    
+            marker_7fe8565637dea985d5e9147593bee921.bindTooltip(
+                `<div>
+                     Артилерійський обстріл (Низька)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7fe8565637dea985d5e9147593bee921.setIcon(icon_bef1b95a76cec10ca2834d2a8f0f6fa6);
+            
+    
+            var marker_261cf2f564f38d555db1c165943a42c1 = L.marker(
+                [48.505546129485495, 37.894936801999954],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_4c80690c8fc566886569c4d31c96322d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plane",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dcd437d22019cc220559aae81769c54d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2bb4b8d6215a5a8a91d36d031156594d = $(`<div id="html_2bb4b8d6215a5a8a91d36d031156594d" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1025</h4>         <b>Час:</b> 2026-10-23 18:30:00<br>         <b>Тип:</b> Удар FPV-дрона<br>         <b>Інтенсивність:</b> Середня<br>         <b>Пошкодження:</b> Ні     </div>     </div>`)[0];
+                popup_dcd437d22019cc220559aae81769c54d.setContent(html_2bb4b8d6215a5a8a91d36d031156594d);
+            
+        
+
+        marker_261cf2f564f38d555db1c165943a42c1.bindPopup(popup_dcd437d22019cc220559aae81769c54d)
+        ;
+
+        
+    
+    
+            marker_261cf2f564f38d555db1c165943a42c1.bindTooltip(
+                `<div>
+                     Удар FPV-дрона (Середня)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_261cf2f564f38d555db1c165943a42c1.setIcon(icon_4c80690c8fc566886569c4d31c96322d);
+            
+    
+            var marker_ba91bcd5a4c7690981acba3854ec6146 = L.marker(
+                [48.44245032112889, 37.79495929148938],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_167d27d3828b11ddce4b0e5f94cd6324 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plane",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c68bcaececd91f09c41b68adafb01346 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_940820aa314cd239d8a2c8c06aa67345 = $(`<div id="html_940820aa314cd239d8a2c8c06aa67345" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1026</h4>         <b>Час:</b> 2026-10-23 19:00:00<br>         <b>Тип:</b> Удар FPV-дрона<br>         <b>Інтенсивність:</b> Висока<br>         <b>Пошкодження:</b> Частково     </div>     </div>`)[0];
+                popup_c68bcaececd91f09c41b68adafb01346.setContent(html_940820aa314cd239d8a2c8c06aa67345);
+            
+        
+
+        marker_ba91bcd5a4c7690981acba3854ec6146.bindPopup(popup_c68bcaececd91f09c41b68adafb01346)
+        ;
+
+        
+    
+    
+            marker_ba91bcd5a4c7690981acba3854ec6146.bindTooltip(
+                `<div>
+                     Удар FPV-дрона (Висока)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ba91bcd5a4c7690981acba3854ec6146.setIcon(icon_167d27d3828b11ddce4b0e5f94cd6324);
+            
+    
+            var marker_5e0275031b0619ded4a01ef49e2f7e6f = L.marker(
+                [48.51878490091728, 37.87024730285244],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_83071267f34897c653cbb5b25d664f66 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9eb5b921e1716490a5a1c8cea5330760 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_86060a0878c0037feefb264eda2c2be8 = $(`<div id="html_86060a0878c0037feefb264eda2c2be8" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1027</h4>         <b>Час:</b> 2026-10-23 19:30:00<br>         <b>Тип:</b> Артилерійський обстріл<br>         <b>Інтенсивність:</b> Низька<br>         <b>Пошкодження:</b> Частково     </div>     </div>`)[0];
+                popup_9eb5b921e1716490a5a1c8cea5330760.setContent(html_86060a0878c0037feefb264eda2c2be8);
+            
+        
+
+        marker_5e0275031b0619ded4a01ef49e2f7e6f.bindPopup(popup_9eb5b921e1716490a5a1c8cea5330760)
+        ;
+
+        
+    
+    
+            marker_5e0275031b0619ded4a01ef49e2f7e6f.bindTooltip(
+                `<div>
+                     Артилерійський обстріл (Низька)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5e0275031b0619ded4a01ef49e2f7e6f.setIcon(icon_83071267f34897c653cbb5b25d664f66);
+            
+    
+            var marker_60c587876904cf1d87c0757f20ed7c65 = L.marker(
+                [48.46996806550406, 37.825314521753334],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_66d53ac073b9cfbc8b4bc47cce828bbc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2aa026dca0031ab9b8da39800e71ac38 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_6e68b5fbbdc6ac20bd961ca6affe1dc6 = $(`<div id="html_6e68b5fbbdc6ac20bd961ca6affe1dc6" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1028</h4>         <b>Час:</b> 2026-10-23 20:00:00<br>         <b>Тип:</b> Артилерійський обстріл<br>         <b>Інтенсивність:</b> Середня<br>         <b>Пошкодження:</b> Частково     </div>     </div>`)[0];
+                popup_2aa026dca0031ab9b8da39800e71ac38.setContent(html_6e68b5fbbdc6ac20bd961ca6affe1dc6);
+            
+        
+
+        marker_60c587876904cf1d87c0757f20ed7c65.bindPopup(popup_2aa026dca0031ab9b8da39800e71ac38)
+        ;
+
+        
+    
+    
+            marker_60c587876904cf1d87c0757f20ed7c65.bindTooltip(
+                `<div>
+                     Артилерійський обстріл (Середня)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_60c587876904cf1d87c0757f20ed7c65.setIcon(icon_66d53ac073b9cfbc8b4bc47cce828bbc);
+            
+    
+            var marker_845913b1b05f624729df1fffe9538d59 = L.marker(
+                [48.485415312510334, 37.75484161717764],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_6fe18052ea8b422c102af5f25d9d1ba1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ead2e20f34ede4b42f63a911a87ee92b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f602ba4b827b241cc02039ae9669199d = $(`<div id="html_f602ba4b827b241cc02039ae9669199d" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1029</h4>         <b>Час:</b> 2026-10-23 20:30:00<br>         <b>Тип:</b> Артилерійський обстріл<br>         <b>Інтенсивність:</b> Середня<br>         <b>Пошкодження:</b> Ні     </div>     </div>`)[0];
+                popup_ead2e20f34ede4b42f63a911a87ee92b.setContent(html_f602ba4b827b241cc02039ae9669199d);
+            
+        
+
+        marker_845913b1b05f624729df1fffe9538d59.bindPopup(popup_ead2e20f34ede4b42f63a911a87ee92b)
+        ;
+
+        
+    
+    
+            marker_845913b1b05f624729df1fffe9538d59.bindTooltip(
+                `<div>
+                     Артилерійський обстріл (Середня)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_845913b1b05f624729df1fffe9538d59.setIcon(icon_6fe18052ea8b422c102af5f25d9d1ba1);
+            
+    
+            var marker_90664f970e3e55c8fe1facca07dfe10a = L.marker(
+                [48.46991466938853, 37.82529769238558],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_607ef26ea0ec1b8594fd008919d3f686 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "bomb",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9aee0b6ff405052fb72068fac92bf752 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_211d5f21a2206627da0eb61b25888aa7 = $(`<div id="html_211d5f21a2206627da0eb61b25888aa7" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1030</h4>         <b>Час:</b> 2026-10-23 21:00:00<br>         <b>Тип:</b> Авіаудар<br>         <b>Інтенсивність:</b> Висока<br>         <b>Пошкодження:</b> Частково     </div>     </div>`)[0];
+                popup_9aee0b6ff405052fb72068fac92bf752.setContent(html_211d5f21a2206627da0eb61b25888aa7);
+            
+        
+
+        marker_90664f970e3e55c8fe1facca07dfe10a.bindPopup(popup_9aee0b6ff405052fb72068fac92bf752)
+        ;
+
+        
+    
+    
+            marker_90664f970e3e55c8fe1facca07dfe10a.bindTooltip(
+                `<div>
+                     Авіаудар (Висока)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_90664f970e3e55c8fe1facca07dfe10a.setIcon(icon_607ef26ea0ec1b8594fd008919d3f686);
+            
+    
+            var marker_b551eaa17f0368ad59c645192efb1a09 = L.marker(
+                [48.59261390922545, 37.907662559652614],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_0c772a0671df38014351c9fac86f24e6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0a8b451d0ed861a557cba6b33863f434 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7dbf3e2bae56a104e5b1bc8dcd4a7267 = $(`<div id="html_7dbf3e2bae56a104e5b1bc8dcd4a7267" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1031</h4>         <b>Час:</b> 2026-10-23 21:30:00<br>         <b>Тип:</b> Артилерійський обстріл<br>         <b>Інтенсивність:</b> Низька<br>         <b>Пошкодження:</b> Ні     </div>     </div>`)[0];
+                popup_0a8b451d0ed861a557cba6b33863f434.setContent(html_7dbf3e2bae56a104e5b1bc8dcd4a7267);
+            
+        
+
+        marker_b551eaa17f0368ad59c645192efb1a09.bindPopup(popup_0a8b451d0ed861a557cba6b33863f434)
+        ;
+
+        
+    
+    
+            marker_b551eaa17f0368ad59c645192efb1a09.bindTooltip(
+                `<div>
+                     Артилерійський обстріл (Низька)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b551eaa17f0368ad59c645192efb1a09.setIcon(icon_0c772a0671df38014351c9fac86f24e6);
+            
+    
+            var marker_61526c3b47f94926cf307aee299b1760 = L.marker(
+                [48.499325138763105, 37.7974921772623],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_d4216f4a3f551db17bfb47a7497ebd9d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plane",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fcdd670db53a5fa117141cd19d7c6964 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_58391b1a37fa355829a1646af77e519a = $(`<div id="html_58391b1a37fa355829a1646af77e519a" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1032</h4>         <b>Час:</b> 2026-10-23 22:00:00<br>         <b>Тип:</b> Удар FPV-дрона<br>         <b>Інтенсивність:</b> Висока<br>         <b>Пошкодження:</b> Ні     </div>     </div>`)[0];
+                popup_fcdd670db53a5fa117141cd19d7c6964.setContent(html_58391b1a37fa355829a1646af77e519a);
+            
+        
+
+        marker_61526c3b47f94926cf307aee299b1760.bindPopup(popup_fcdd670db53a5fa117141cd19d7c6964)
+        ;
+
+        
+    
+    
+            marker_61526c3b47f94926cf307aee299b1760.bindTooltip(
+                `<div>
+                     Удар FPV-дрона (Висока)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_61526c3b47f94926cf307aee299b1760.setIcon(icon_d4216f4a3f551db17bfb47a7497ebd9d);
+            
+    
+            var marker_4996cf931b78afdef46fdc97c23845f8 = L.marker(
+                [48.4471144535522, 37.909525055906975],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_d8418b04131653033e3365e5a65af5f6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "shield-halved",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_77cab03725b1f83ca6f69aaa2d72c24c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3621a8b306130f8db76c3617625cb97e = $(`<div id="html_3621a8b306130f8db76c3617625cb97e" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1033</h4>         <b>Час:</b> 2026-10-23 22:30:00<br>         <b>Тип:</b> Стрілецький бій<br>         <b>Інтенсивність:</b> Середня<br>         <b>Пошкодження:</b> Частково     </div>     </div>`)[0];
+                popup_77cab03725b1f83ca6f69aaa2d72c24c.setContent(html_3621a8b306130f8db76c3617625cb97e);
+            
+        
+
+        marker_4996cf931b78afdef46fdc97c23845f8.bindPopup(popup_77cab03725b1f83ca6f69aaa2d72c24c)
+        ;
+
+        
+    
+    
+            marker_4996cf931b78afdef46fdc97c23845f8.bindTooltip(
+                `<div>
+                     Стрілецький бій (Середня)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4996cf931b78afdef46fdc97c23845f8.setIcon(icon_d8418b04131653033e3365e5a65af5f6);
+            
+    
+            var marker_0ff571a82f5638a3b3f2df11bc44fa31 = L.marker(
+                [48.54112724560516, 37.616617842713715],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_94f1e11648cbe8736b9b53fbbe5a056e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b125d9e6dc1e81c7ac672f106195f8cd = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f25a8d6c279a2363f6d30f01beadb0e6 = $(`<div id="html_f25a8d6c279a2363f6d30f01beadb0e6" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1034</h4>         <b>Час:</b> 2026-10-23 23:00:00<br>         <b>Тип:</b> Артилерійський обстріл<br>         <b>Інтенсивність:</b> Критична<br>         <b>Пошкодження:</b> Частково     </div>     </div>`)[0];
+                popup_b125d9e6dc1e81c7ac672f106195f8cd.setContent(html_f25a8d6c279a2363f6d30f01beadb0e6);
+            
+        
+
+        marker_0ff571a82f5638a3b3f2df11bc44fa31.bindPopup(popup_b125d9e6dc1e81c7ac672f106195f8cd)
+        ;
+
+        
+    
+    
+            marker_0ff571a82f5638a3b3f2df11bc44fa31.bindTooltip(
+                `<div>
+                     Артилерійський обстріл (Критична)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0ff571a82f5638a3b3f2df11bc44fa31.setIcon(icon_94f1e11648cbe8736b9b53fbbe5a056e);
+            
+    
+            var marker_a047c40babb59fc44c139ec3d416c634 = L.marker(
+                [48.438957817501446, 37.857533175306266],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_2d314b0149e3067879ac6ee83f7a4342 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "bomb",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e963434b8eb4abdd3172b04922cab40f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_952ceff1e1e8e9044e298f8270969a80 = $(`<div id="html_952ceff1e1e8e9044e298f8270969a80" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1035</h4>         <b>Час:</b> 2026-10-23 23:30:00<br>         <b>Тип:</b> Авіаудар<br>         <b>Інтенсивність:</b> Низька<br>         <b>Пошкодження:</b> Так     </div>     </div>`)[0];
+                popup_e963434b8eb4abdd3172b04922cab40f.setContent(html_952ceff1e1e8e9044e298f8270969a80);
+            
+        
+
+        marker_a047c40babb59fc44c139ec3d416c634.bindPopup(popup_e963434b8eb4abdd3172b04922cab40f)
+        ;
+
+        
+    
+    
+            marker_a047c40babb59fc44c139ec3d416c634.bindTooltip(
+                `<div>
+                     Авіаудар (Низька)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a047c40babb59fc44c139ec3d416c634.setIcon(icon_2d314b0149e3067879ac6ee83f7a4342);
+            
+    
+            var marker_440eff720fbe2c0f0226504a9e2ec045 = L.marker(
+                [48.51044317975024, 37.806093294776666],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_6f856a6267aa342fc0b1bac6cc561ee1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "bomb",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6fe093a2a4371bfd61323744a505d5a2 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_eced638a3ae546d17fa3db793878c9f2 = $(`<div id="html_eced638a3ae546d17fa3db793878c9f2" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1036</h4>         <b>Час:</b> 2026-10-24 00:00:00<br>         <b>Тип:</b> Авіаудар<br>         <b>Інтенсивність:</b> Середня<br>         <b>Пошкодження:</b> Частково     </div>     </div>`)[0];
+                popup_6fe093a2a4371bfd61323744a505d5a2.setContent(html_eced638a3ae546d17fa3db793878c9f2);
+            
+        
+
+        marker_440eff720fbe2c0f0226504a9e2ec045.bindPopup(popup_6fe093a2a4371bfd61323744a505d5a2)
+        ;
+
+        
+    
+    
+            marker_440eff720fbe2c0f0226504a9e2ec045.bindTooltip(
+                `<div>
+                     Авіаудар (Середня)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_440eff720fbe2c0f0226504a9e2ec045.setIcon(icon_6f856a6267aa342fc0b1bac6cc561ee1);
+            
+    
+            var marker_54c30fc1b4b36670487e49436543518b = L.marker(
+                [48.40201649380601, 37.77906948546739],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_a75c938586ad1396bf682fa0a5ef2a57 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ae12ff4200fe209eff79d01efea3610e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_ca938b466a4d090ad4922a17d66def1b = $(`<div id="html_ca938b466a4d090ad4922a17d66def1b" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1037</h4>         <b>Час:</b> 2026-10-24 00:30:00<br>         <b>Тип:</b> Артилерійський обстріл<br>         <b>Інтенсивність:</b> Низька<br>         <b>Пошкодження:</b> Частково     </div>     </div>`)[0];
+                popup_ae12ff4200fe209eff79d01efea3610e.setContent(html_ca938b466a4d090ad4922a17d66def1b);
+            
+        
+
+        marker_54c30fc1b4b36670487e49436543518b.bindPopup(popup_ae12ff4200fe209eff79d01efea3610e)
+        ;
+
+        
+    
+    
+            marker_54c30fc1b4b36670487e49436543518b.bindTooltip(
+                `<div>
+                     Артилерійський обстріл (Низька)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_54c30fc1b4b36670487e49436543518b.setIcon(icon_a75c938586ad1396bf682fa0a5ef2a57);
+            
+    
+            var marker_eadb541c2a53d83ed1aed81119908338 = L.marker(
+                [48.433590697555076, 37.80642325435748],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_092d039c7dda7a254205bcece59a3b51 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plane",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ed9720692f0e5c635f00ae5d311aa1dc = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3248fc21c161445aef4630d144746bd0 = $(`<div id="html_3248fc21c161445aef4630d144746bd0" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1038</h4>         <b>Час:</b> 2026-10-24 01:00:00<br>         <b>Тип:</b> Удар FPV-дрона<br>         <b>Інтенсивність:</b> Критична<br>         <b>Пошкодження:</b> Ні     </div>     </div>`)[0];
+                popup_ed9720692f0e5c635f00ae5d311aa1dc.setContent(html_3248fc21c161445aef4630d144746bd0);
+            
+        
+
+        marker_eadb541c2a53d83ed1aed81119908338.bindPopup(popup_ed9720692f0e5c635f00ae5d311aa1dc)
+        ;
+
+        
+    
+    
+            marker_eadb541c2a53d83ed1aed81119908338.bindTooltip(
+                `<div>
+                     Удар FPV-дрона (Критична)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_eadb541c2a53d83ed1aed81119908338.setIcon(icon_092d039c7dda7a254205bcece59a3b51);
+            
+    
+            var marker_7fe3d85f6dfce304c6e3cc3883b8e19e = L.marker(
+                [48.509843061793454, 37.660870175977934],
+                {
+}
+            ).addTo(marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e);
+        
+    
+            var icon_7b827502c2e77a5bbeb38b2b0bc8e17a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_94fa272afed2a43fcfd88863f65879fb = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_92df3646d9f618b002c497002074ed25 = $(`<div id="html_92df3646d9f618b002c497002074ed25" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">         <h4 style="margin: 0 0 5px 0; color: #333;">EVT-1039</h4>         <b>Час:</b> 2026-10-24 01:30:00<br>         <b>Тип:</b> Артилерійський обстріл<br>         <b>Інтенсивність:</b> Висока<br>         <b>Пошкодження:</b> Ні     </div>     </div>`)[0];
+                popup_94fa272afed2a43fcfd88863f65879fb.setContent(html_92df3646d9f618b002c497002074ed25);
+            
+        
+
+        marker_7fe3d85f6dfce304c6e3cc3883b8e19e.bindPopup(popup_94fa272afed2a43fcfd88863f65879fb)
+        ;
+
+        
+    
+    
+            marker_7fe3d85f6dfce304c6e3cc3883b8e19e.bindTooltip(
+                `<div>
+                     Артилерійський обстріл (Висока)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7fe3d85f6dfce304c6e3cc3883b8e19e.setIcon(icon_7b827502c2e77a5bbeb38b2b0bc8e17a);
+            
+    
+            marker_cluster_1c7bcbc6ffaf210d738b8e94d5bb735e.addTo(feature_group_289982e1db67098c19132c5de99ef4a7);
+        
+    
+            feature_group_289982e1db67098c19132c5de99ef4a7.addTo(map_5d4a78a4737d72dd836e03b97533fc3a);
+        
+    
+            L.Control.TimeDimensionCustom = L.Control.TimeDimension.extend({
+                _getDisplayDateFormat: function(date){
+                    var newdate = new moment(date);
+                    console.log(newdate)
+                    return newdate.format("YYYY-MM-DD HH:mm:ss");
+                }
+            });
+            map_5d4a78a4737d72dd836e03b97533fc3a.timeDimension = L.timeDimension(
+                {
+                    period: "PT30M",
+                }
+            );
+            var timeDimensionControl = new L.Control.TimeDimensionCustom(
+                {
+  "position": "bottomleft",
+  "minSpeed": 0.1,
+  "maxSpeed": 1,
+  "autoPlay": false,
+  "loopButton": true,
+  "timeSliderDragUpdate": true,
+  "speedSlider": true,
+  "playerOptions": {
+  "transitionTime": 200,
+  "loop": false,
+  "startOver": true,
+},
+}
+            );
+            map_5d4a78a4737d72dd836e03b97533fc3a.addControl(this.timeDimensionControl);
+
+            var geoJsonLayer = L.geoJson({"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.851692660599674, 48.52483570765056]}, "properties": {"time": "2026-10-23T06:00:00", "style": {"color": "darkred"}, "icon": "circle", "iconstyle": {"fillColor": "darkred", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0410\u0432\u0456\u0430\u0443\u0434\u0430\u0440</b><br>2026-10-23 06:00:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.81199577968329, 48.49308678494144]}, "properties": {"time": "2026-10-23T06:30:00", "style": {"color": "orange"}, "icon": "circle", "iconstyle": {"fillColor": "orange", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0410\u0440\u0442\u0438\u043b\u0435\u0440\u0456\u0439\u0441\u044c\u043a\u0438\u0439 \u043e\u0431\u0441\u0442\u0440\u0456\u043b</b><br>2026-10-23 06:30:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.79190462023282, 48.53238442690503]}, "properties": {"time": "2026-10-23T07:00:00", "style": {"color": "red"}, "icon": "circle", "iconstyle": {"fillColor": "red", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0423\u0434\u0430\u0440 FPV-\u0434\u0440\u043e\u043d\u0430</b><br>2026-10-23 07:00:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.77892274130875, 48.5761514928204]}, "properties": {"time": "2026-10-23T07:30:00", "style": {"color": "blue"}, "icon": "circle", "iconstyle": {"fillColor": "blue", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0421\u0442\u0440\u0456\u043b\u0435\u0446\u044c\u043a\u0438\u0439 \u0431\u0456\u0439</b><br>2026-10-23 07:30:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.69650346067428, 48.488292331263835]}, "properties": {"time": "2026-10-23T08:00:00", "style": {"color": "orange"}, "icon": "circle", "iconstyle": {"fillColor": "orange", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0410\u0440\u0442\u0438\u043b\u0435\u0440\u0456\u0439\u0441\u044c\u043a\u0438\u0439 \u043e\u0431\u0441\u0442\u0440\u0456\u043b</b><br>2026-10-23 08:00:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.74961090541237, 48.48829315215254]}, "properties": {"time": "2026-10-23T08:30:00", "style": {"color": "orange"}, "icon": "circle", "iconstyle": {"fillColor": "orange", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0410\u0440\u0442\u0438\u043b\u0435\u0440\u0456\u0439\u0441\u044c\u043a\u0438\u0439 \u043e\u0431\u0441\u0442\u0440\u0456\u043b</b><br>2026-10-23 08:30:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.76775528603281, 48.57896064077537]}, "properties": {"time": "2026-10-23T09:00:00", "style": {"color": "orange"}, "icon": "circle", "iconstyle": {"fillColor": "orange", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0410\u0440\u0442\u0438\u043b\u0435\u0440\u0456\u0439\u0441\u044c\u043a\u0438\u0439 \u043e\u0431\u0441\u0442\u0440\u0456\u043b</b><br>2026-10-23 09:00:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.87399855583532, 48.53837173645765]}, "properties": {"time": "2026-10-23T09:30:00", "style": {"color": "orange"}, "icon": "circle", "iconstyle": {"fillColor": "orange", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0410\u0440\u0442\u0438\u043b\u0435\u0440\u0456\u0439\u0441\u044c\u043a\u0438\u0439 \u043e\u0431\u0441\u0442\u0440\u0456\u043b</b><br>2026-10-23 09:30:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.82405328026979, 48.476526280703254]}, "properties": {"time": "2026-10-23T10:00:00", "style": {"color": "darkred"}, "icon": "circle", "iconstyle": {"fillColor": "darkred", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0410\u0432\u0456\u0430\u0443\u0434\u0430\u0440</b><br>2026-10-23 10:00:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.676587189124604, 48.527128002179296]}, "properties": {"time": "2026-10-23T10:30:00", "style": {"color": "blue"}, "icon": "circle", "iconstyle": {"fillColor": "blue", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0421\u0442\u0440\u0456\u043b\u0435\u0446\u044c\u043a\u0438\u0439 \u0431\u0456\u0439</b><br>2026-10-23 10:30:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.82268587785763, 48.47682911535938]}, "properties": {"time": "2026-10-23T11:00:00", "style": {"color": "red"}, "icon": "circle", "iconstyle": {"fillColor": "red", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0423\u0434\u0430\u0440 FPV-\u0434\u0440\u043e\u043d\u0430</b><br>2026-10-23 11:00:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.77304424037086, 48.47671351232149]}, "properties": {"time": "2026-10-23T11:30:00", "style": {"color": "blue"}, "icon": "circle", "iconstyle": {"fillColor": "blue", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0421\u0442\u0440\u0456\u043b\u0435\u0446\u044c\u043a\u0438\u0439 \u0431\u0456\u0439</b><br>2026-10-23 11:30:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.75261545997858, 48.512098113578304]}, "properties": {"time": "2026-10-23T12:00:00", "style": {"color": "blue"}, "icon": "circle", "iconstyle": {"fillColor": "blue", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0421\u0442\u0440\u0456\u043b\u0435\u0446\u044c\u043a\u0438\u0439 \u0431\u0456\u0439</b><br>2026-10-23 12:00:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.84281734021886, 48.40433598776711]}, "properties": {"time": "2026-10-23T12:30:00", "style": {"color": "orange"}, "icon": "circle", "iconstyle": {"fillColor": "orange", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0410\u0440\u0442\u0438\u043b\u0435\u0440\u0456\u0439\u0441\u044c\u043a\u0438\u0439 \u043e\u0431\u0441\u0442\u0440\u0456\u043b</b><br>2026-10-23 12:30:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.87216996657472, 48.41375410837435]}, "properties": {"time": "2026-10-23T13:00:00", "style": {"color": "blue"}, "icon": "circle", "iconstyle": {"fillColor": "blue", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0421\u0442\u0440\u0456\u043b\u0435\u0446\u044c\u043a\u0438\u0439 \u0431\u0456\u0439</b><br>2026-10-23 13:00:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.865189608338135, 48.47188562353795]}, "properties": {"time": "2026-10-23T13:30:00", "style": {"color": "red"}, "icon": "circle", "iconstyle": {"fillColor": "red", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0423\u0434\u0430\u0440 FPV-\u0434\u0440\u043e\u043d\u0430</b><br>2026-10-23 13:30:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.741254773374415, 48.44935844398328]}, "properties": {"time": "2026-10-23T14:00:00", "style": {"color": "blue"}, "icon": "circle", "iconstyle": {"fillColor": "blue", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0421\u0442\u0440\u0456\u043b\u0435\u0446\u044c\u043a\u0438\u0439 \u0431\u0456\u0439</b><br>2026-10-23 14:00:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.77835513369041, 48.515712366629764]}, "properties": {"time": "2026-10-23T14:30:00", "style": {"color": "blue"}, "icon": "circle", "iconstyle": {"fillColor": "blue", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0421\u0442\u0440\u0456\u043b\u0435\u0446\u044c\u043a\u0438\u0439 \u0431\u0456\u0439</b><br>2026-10-23 14:30:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.823188440198244, 48.45459879622394]}, "properties": {"time": "2026-10-23T15:00:00", "style": {"color": "orange"}, "icon": "circle", "iconstyle": {"fillColor": "orange", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0410\u0440\u0442\u0438\u043b\u0435\u0440\u0456\u0439\u0441\u044c\u043a\u0438\u0439 \u043e\u0431\u0441\u0442\u0440\u0456\u043b</b><br>2026-10-23 15:00:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.868288158898565, 48.429384814933236]}, "properties": {"time": "2026-10-23T15:30:00", "style": {"color": "orange"}, "icon": "circle", "iconstyle": {"fillColor": "orange", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0410\u0440\u0442\u0438\u043b\u0435\u0440\u0456\u0439\u0441\u044c\u043a\u0438\u0439 \u043e\u0431\u0441\u0442\u0440\u0456\u043b</b><br>2026-10-23 15:30:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.766457803350825, 48.57328243844608]}, "properties": {"time": "2026-10-23T16:00:00", "style": {"color": "orange"}, "icon": "circle", "iconstyle": {"fillColor": "orange", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0410\u0440\u0442\u0438\u043b\u0435\u0440\u0456\u0439\u0441\u044c\u043a\u0438\u0439 \u043e\u0431\u0441\u0442\u0440\u0456\u043b</b><br>2026-10-23 16:00:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.78700387163353, 48.48871118497567]}, "properties": {"time": "2026-10-23T16:30:00", "style": {"color": "red"}, "icon": "circle", "iconstyle": {"fillColor": "red", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0423\u0434\u0430\u0440 FPV-\u0434\u0440\u043e\u043d\u0430</b><br>2026-10-23 16:30:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.72255655181957, 48.503376410234395]}, "properties": {"time": "2026-10-23T17:00:00", "style": {"color": "blue"}, "icon": "circle", "iconstyle": {"fillColor": "blue", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0421\u0442\u0440\u0456\u043b\u0435\u0446\u044c\u043a\u0438\u0439 \u0431\u0456\u0439</b><br>2026-10-23 17:00:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.71626553631435, 48.428762590689324]}, "properties": {"time": "2026-10-23T17:30:00", "style": {"color": "blue"}, "icon": "circle", "iconstyle": {"fillColor": "blue", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0421\u0442\u0440\u0456\u043b\u0435\u0446\u044c\u043a\u0438\u0439 \u0431\u0456\u0439</b><br>2026-10-23 17:30:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.85687680756759, 48.47278086377374]}, "properties": {"time": "2026-10-23T18:00:00", "style": {"color": "orange"}, "icon": "circle", "iconstyle": {"fillColor": "orange", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0410\u0440\u0442\u0438\u043b\u0435\u0440\u0456\u0439\u0441\u044c\u043a\u0438\u0439 \u043e\u0431\u0441\u0442\u0440\u0456\u043b</b><br>2026-10-23 18:00:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.894936801999954, 48.505546129485495]}, "properties": {"time": "2026-10-23T18:30:00", "style": {"color": "red"}, "icon": "circle", "iconstyle": {"fillColor": "red", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0423\u0434\u0430\u0440 FPV-\u0434\u0440\u043e\u043d\u0430</b><br>2026-10-23 18:30:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.79495929148938, 48.44245032112889]}, "properties": {"time": "2026-10-23T19:00:00", "style": {"color": "red"}, "icon": "circle", "iconstyle": {"fillColor": "red", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0423\u0434\u0430\u0440 FPV-\u0434\u0440\u043e\u043d\u0430</b><br>2026-10-23 19:00:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.87024730285244, 48.51878490091728]}, "properties": {"time": "2026-10-23T19:30:00", "style": {"color": "orange"}, "icon": "circle", "iconstyle": {"fillColor": "orange", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0410\u0440\u0442\u0438\u043b\u0435\u0440\u0456\u0439\u0441\u044c\u043a\u0438\u0439 \u043e\u0431\u0441\u0442\u0440\u0456\u043b</b><br>2026-10-23 19:30:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.825314521753334, 48.46996806550406]}, "properties": {"time": "2026-10-23T20:00:00", "style": {"color": "orange"}, "icon": "circle", "iconstyle": {"fillColor": "orange", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0410\u0440\u0442\u0438\u043b\u0435\u0440\u0456\u0439\u0441\u044c\u043a\u0438\u0439 \u043e\u0431\u0441\u0442\u0440\u0456\u043b</b><br>2026-10-23 20:00:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.75484161717764, 48.485415312510334]}, "properties": {"time": "2026-10-23T20:30:00", "style": {"color": "orange"}, "icon": "circle", "iconstyle": {"fillColor": "orange", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0410\u0440\u0442\u0438\u043b\u0435\u0440\u0456\u0439\u0441\u044c\u043a\u0438\u0439 \u043e\u0431\u0441\u0442\u0440\u0456\u043b</b><br>2026-10-23 20:30:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.82529769238558, 48.46991466938853]}, "properties": {"time": "2026-10-23T21:00:00", "style": {"color": "darkred"}, "icon": "circle", "iconstyle": {"fillColor": "darkred", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0410\u0432\u0456\u0430\u0443\u0434\u0430\u0440</b><br>2026-10-23 21:00:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.907662559652614, 48.59261390922545]}, "properties": {"time": "2026-10-23T21:30:00", "style": {"color": "orange"}, "icon": "circle", "iconstyle": {"fillColor": "orange", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0410\u0440\u0442\u0438\u043b\u0435\u0440\u0456\u0439\u0441\u044c\u043a\u0438\u0439 \u043e\u0431\u0441\u0442\u0440\u0456\u043b</b><br>2026-10-23 21:30:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.7974921772623, 48.499325138763105]}, "properties": {"time": "2026-10-23T22:00:00", "style": {"color": "red"}, "icon": "circle", "iconstyle": {"fillColor": "red", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0423\u0434\u0430\u0440 FPV-\u0434\u0440\u043e\u043d\u0430</b><br>2026-10-23 22:00:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.909525055906975, 48.4471144535522]}, "properties": {"time": "2026-10-23T22:30:00", "style": {"color": "blue"}, "icon": "circle", "iconstyle": {"fillColor": "blue", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0421\u0442\u0440\u0456\u043b\u0435\u0446\u044c\u043a\u0438\u0439 \u0431\u0456\u0439</b><br>2026-10-23 22:30:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.616617842713715, 48.54112724560516]}, "properties": {"time": "2026-10-23T23:00:00", "style": {"color": "orange"}, "icon": "circle", "iconstyle": {"fillColor": "orange", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0410\u0440\u0442\u0438\u043b\u0435\u0440\u0456\u0439\u0441\u044c\u043a\u0438\u0439 \u043e\u0431\u0441\u0442\u0440\u0456\u043b</b><br>2026-10-23 23:00:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.857533175306266, 48.438957817501446]}, "properties": {"time": "2026-10-23T23:30:00", "style": {"color": "darkred"}, "icon": "circle", "iconstyle": {"fillColor": "darkred", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0410\u0432\u0456\u0430\u0443\u0434\u0430\u0440</b><br>2026-10-23 23:30:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.806093294776666, 48.51044317975024]}, "properties": {"time": "2026-10-24T00:00:00", "style": {"color": "darkred"}, "icon": "circle", "iconstyle": {"fillColor": "darkred", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0410\u0432\u0456\u0430\u0443\u0434\u0430\u0440</b><br>2026-10-24 00:00:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.77906948546739, 48.40201649380601]}, "properties": {"time": "2026-10-24T00:30:00", "style": {"color": "orange"}, "icon": "circle", "iconstyle": {"fillColor": "orange", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0410\u0440\u0442\u0438\u043b\u0435\u0440\u0456\u0439\u0441\u044c\u043a\u0438\u0439 \u043e\u0431\u0441\u0442\u0440\u0456\u043b</b><br>2026-10-24 00:30:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.80642325435748, 48.433590697555076]}, "properties": {"time": "2026-10-24T01:00:00", "style": {"color": "red"}, "icon": "circle", "iconstyle": {"fillColor": "red", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0423\u0434\u0430\u0440 FPV-\u0434\u0440\u043e\u043d\u0430</b><br>2026-10-24 01:00:00"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.660870175977934, 48.509843061793454]}, "properties": {"time": "2026-10-24T01:30:00", "style": {"color": "orange"}, "icon": "circle", "iconstyle": {"fillColor": "orange", "fillOpacity": 0.8, "stroke": "true", "radius": 7}, "popup": "<b>\u0410\u0440\u0442\u0438\u043b\u0435\u0440\u0456\u0439\u0441\u044c\u043a\u0438\u0439 \u043e\u0431\u0441\u0442\u0440\u0456\u043b</b><br>2026-10-24 01:30:00"}}]}, {
+                    pointToLayer: function (feature, latLng) {
+                        if (feature.properties.icon == 'marker') {
+                            if(feature.properties.iconstyle){
+                                return new L.Marker(latLng, {
+                                    icon: L.icon(feature.properties.iconstyle)});
+                            }
+                            //else
+                            return new L.Marker(latLng);
+                        }
+                        if (feature.properties.icon == 'circle') {
+                            if (feature.properties.iconstyle) {
+                                return new L.circleMarker(latLng, feature.properties.iconstyle)
+                                };
+                            //else
+                            return new L.circleMarker(latLng);
+                        }
+                        //else
+
+                        return new L.Marker(latLng);
+                    },
+                    style: function (feature) {
+                        return feature.properties.style;
+                    },
+                    onEachFeature: function(feature, layer) {
+                        if (feature.properties.popup) {
+                        layer.bindPopup(feature.properties.popup);
+                        }
+                        if (feature.properties.tooltip) {
+                        layer.bindTooltip(feature.properties.tooltip);
+                        }
+                    }
+                })
+
+            var timestamped_geo_json_2eee0513866715e14d94eeba518614be = L.timeDimension.layer.geoJson(
+                geoJsonLayer,
+                {
+                    updateTimeDimension: true,
+                    addlastPoint: true,
+                    duration: "PT1H",
+                }
+            ).addTo(map_5d4a78a4737d72dd836e03b97533fc3a);
+        
+    
+            var layer_control_034073b02a9526ad94557ec15fa5eb0f_layers = {
+                base_layers : {
+                    "cartodbdarkmatter" : tile_layer_3b8aaaf958cce74e9f461ede856dbab9,
+                },
+                overlays :  {
+                    "\u041a\u043b\u0430\u0441\u0442\u0435\u0440\u0438\u0437\u043e\u0432\u0430\u043d\u0456 \u043c\u0430\u0440\u043a\u0435\u0440\u0438" : feature_group_289982e1db67098c19132c5de99ef4a7,
+                },
+            };
+            let layer_control_034073b02a9526ad94557ec15fa5eb0f = L.control.layers(
+                layer_control_034073b02a9526ad94557ec15fa5eb0f_layers.base_layers,
+                layer_control_034073b02a9526ad94557ec15fa5eb0f_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_5d4a78a4737d72dd836e03b97533fc3a);
+
+        
+</script>
+</html>
