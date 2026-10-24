@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Оперативний Дашборд</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Оперативний Дашборд</h1>
+    <nav class="views">
+      Режим:
+      <a href="?view=executive" data-view="executive">Executive</a>
+      <a href="?view=analyst" data-view="analyst">Analyst</a>
+      <a href="?view=demo" data-view="demo">Demo</a>
+    </nav>
+  </header>
+
+  <section class="filters card">
+    <label>З <input type="date" id="f-from"></label>
+    <label>По <input type="date" id="f-to"></label>
+    <label>Сектор <select id="f-sector"><option value="">Усі</option></select></label>
+    <label>Напрямок <select id="f-direction"><option value="">Усі</option></select></label>
+    <label>Тип <select id="f-type"><option value="">Усі</option></select></label>
+    <label>Мін. інтенсивність <input type="number" id="f-min" min="1" max="50" placeholder="1–50"></label>
+    <label>Тренд <select id="f-group"><option value="day">по днях</option><option value="week">по тижнях</option></select></label>
+    <button id="apply">Застосувати</button>
+    <button id="reset" class="secondary">Скинути</button>
+  </section>
+
+  <section class="kpis">
+    <div class="card kpi"><span id="k-total">–</span><small>Інцидентів</small></div>
+    <div class="card kpi"><span id="k-int">–</span><small>Сумарна інтенсивність</small></div>
+    <div class="card kpi"><span id="k-avg">–</span><small>Середня інтенсивність</small></div>
+    <div class="card kpi"><span id="k-top">–</span><small>Найактивніший напрямок</small></div>
+  </section>
+
+  <section class="card" data-block="insight"><p id="insight">Завантаження…</p></section>
+
+  <section class="card" data-block="trend"><h2>Динаміка інцидентів</h2><div class="chart"><canvas id="c-trend"></canvas></div></section>
+
+  <section class="grid2" data-block="dist">
+    <div class="card"><h2>Розподіл за напрямками</h2><div class="chart"><canvas id="c-dir"></canvas></div></div>
+    <div class="card"><h2>Розподіл за типами подій</h2><div class="chart"><canvas id="c-type"></canvas></div></div>
+  </section>
+
+  <section class="card" data-block="heatmap"><h2>Інтенсивність: сектор × тиждень</h2><div class="scroll"><table id="heatmap"></table></div></section>
+
+  <section class="card" data-block="table">
+    <h2>Інциденти</h2>
+    <table id="incidents">
+      <thead><tr><th>ID</th><th>Час</th><th>Сектор</th><th>Напрямок</th><th>Тип</th><th>Інтенс.</th><th class="src">Джерело</th><th></th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <div class="pager"><button id="prev">‹ Назад</button><span id="page-info"></span><button id="next">Далі ›</button></div>
+  </section>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-box card">
+      <button class="close" id="modal-close">×</button>
+      <h2>Деталі інциденту</h2>
+      <dl id="modal-body"></dl>
+    </div>
+  </div>
+
+  <footer>Навчальна модель · дані синтетичні · PostgreSQL → FastAPI → JS</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
