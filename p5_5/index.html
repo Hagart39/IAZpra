@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Дашборд військового аналітика</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Збройні Сили України</div>
+    <ul class="nav-menu">
+      <li><a href="#">Головна</a></li>
+      <li><a href="#">Аналітика</a></li>
+      <li><a href="#">Звіти</a></li>
+      <li><a href="#">Контакти</a></li>
+    </ul>
+  </nav>
+
+  <header class="header">
+    <h1>Дашборд військового аналітика</h1>
+    <p class="subtitle">Особовий склад навчальних груп: кількісні показники, структура за званнями, розміщення</p>
+  </header>
+
+  <main class="container">
+    <div class="flex-container">
+      <div class="graph-block">
+        <h2>1. Ключові показники</h2>
+        <div class="graph-placeholder kpi-wrap" id="kpi"></div>
+      </div>
+      <div class="graph-block">
+        <h2>2. Чисельність за групами</h2>
+        <div class="graph-placeholder"><canvas id="chartGroups"></canvas></div>
+      </div>
+      <div class="graph-block">
+        <h2>3. Структура за званнями</h2>
+        <div class="graph-placeholder"><canvas id="chartRanks"></canvas></div>
+      </div>
+      <div class="graph-block">
+        <h2>4. Розміщення груп</h2>
+        <div class="graph-placeholder"><div id="map"></div></div>
+      </div>
+    </div>
+
+    <div class="graph-block table-block">
+      <h2>Список особового складу</h2>
+      <label>Група:
+        <select id="groupFilter"><option value="">Усі</option></select>
+      </label>
+      <table id="students">
+        <thead><tr><th>ПІБ</th><th>Дата народження</th><th>Вік</th><th>Звання</th><th>Група</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer class="footer">© 2026 Збройні Сили України · навчальний дашборд (практична 5.5)</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="mock.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
