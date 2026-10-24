@@ -1,0 +1,5 @@
+sync.bat
+.ipynb_checkpoints/
+__pycache__/
+.venv/
+.env
