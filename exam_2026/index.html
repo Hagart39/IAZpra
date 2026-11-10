@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ІАЗ: накопичення та узагальнення інформації</title>
+
+    <!-- Leaflet (карта OpenStreetMap) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">Збройні Сили України · ІАЗ</div>
+      <ul class="nav-menu">
+        <li><a href="#kpi">Показники</a></li>
+        <li><a href="#summary">Зведення</a></li>
+        <li><a href="#charts">Аналітика</a></li>
+        <li><a href="#map-block">Карта</a></li>
+        <li><a href="#table-block">Журнал</a></li>
+      </ul>
+    </nav>
+
+    <header class="header">
+      <h1>Інформаційно-аналітичне забезпечення</h1>
+      <p class="subtitle">Накопичення, оцінка та узагальнення інформації</p>
+      <div class="status-bar">
+        <span id="api-status" class="status status-wait">Підключення…</span>
+        <span id="last-update">—</span>
+        <div class="period" role="group" aria-label="Період">
+          <button type="button" data-days="7">7 діб</button>
+          <button type="button" data-days="30" class="active">30 діб</button>
+          <button type="button" data-days="90">90 діб</button>
+        </div>
+        <button id="refresh-btn" type="button">Оновити</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- KPI-картки -->
+      <section id="kpi" class="kpi-grid">
+        <article class="kpi-card">
+          <span class="kpi-label">Накопичено повідомлень</span>
+          <strong id="kpi-total" class="kpi-value">—</strong>
+        </article>
+        <article class="kpi-card">
+          <span class="kpi-label">Надійшло за останню добу</span>
+          <strong id="kpi-day" class="kpi-value">—</strong>
+        </article>
+        <article class="kpi-card">
+          <span class="kpi-label">Узагальнено</span>
+          <strong id="kpi-generalized" class="kpi-value">—</strong>
+        </article>
+        <article class="kpi-card">
+          <span class="kpi-label">Достовірні (A–B / 1–2)</span>
+          <strong id="kpi-reliable" class="kpi-value">—</strong>
+        </article>
+      </section>
+
+      <!-- Автоматичне зведення + етапи обробки -->
+      <section id="summary" class="grid-2">
+        <div class="graph-block">
+          <h2>Зведення за період</h2>
+          <div id="summary-text" class="summary"></div>
+        </div>
+        <div class="graph-block">
+          <h2>Етапи обробки інформації</h2>
+          <div id="pipeline" class="pipeline"></div>
+        </div>
+      </section>
+
+      <!-- Графіки -->
+      <section id="charts" class="grid-2">
+        <div class="graph-block wide">
+          <h2>Накопичення інформації (по добах і наростаючим підсумком)</h2>
+          <div class="chart-box"><canvas id="accum-chart"></canvas></div>
+        </div>
+        <div class="graph-block">
+          <h2>Джерела інформації</h2>
+          <div class="chart-box"><canvas id="source-chart"></canvas></div>
+        </div>
+        <div class="graph-block">
+          <h2>Категорії відомостей</h2>
+          <div class="chart-box"><canvas id="category-chart"></canvas></div>
+        </div>
+        <div class="graph-block wide">
+          <h2>Оцінка інформації: надійність джерела × достовірність</h2>
+          <div id="admiralty" class="matrix"></div>
+          <p class="hint">A — цілком надійне … F — надійність не визначено; 1 — підтверджено … 6 — неможливо оцінити</p>
+        </div>
+      </section>
+
+      <!-- Карта з умовними знаками -->
+      <section id="map-block" class="graph-block">
+        <h2>Узагальнена обстановка (OpenStreetMap + milsymbol)</h2>
+        <div id="map"></div>
+        <div id="map-legend" class="legend"></div>
+      </section>
+
+      <!-- Таблиця -->
+      <section id="table-block" class="graph-block">
+        <h2>Журнал повідомлень</h2>
+        <div class="table-wrap">
+          <table id="records-table">
+            <thead>
+              <tr>
+                <th>Надійшло</th>
+                <th>Джерело</th>
+                <th>Категорія</th>
+                <th>Оцінка</th>
+                <th>Статус</th>
+                <th>Зміст</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">© 2026 Збройні Сили України · навчальний прототип, дані синтетичні</footer>
+
+    <!-- Chart.js (графіки) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <!-- Leaflet (карта) -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- milsymbol (тактичні знаки APP-6 / MIL-STD-2525) -->
+    <script src="https://unpkg.com/milsymbol@2.2.0/dist/milsymbol.js"></script>
+
+    <script src="app.js"></script>
+  </body>
+</html>

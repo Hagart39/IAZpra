@@ -1,0 +1,379 @@
+/* CSS-змінні відповідно до брендбуку ЗСУ */
+:root {
+    --color-primary: #005a34;       /* Темно-зелений */
+    --color-accent: #ffdd00;        /* Жовтий */
+    --color-background: #f7f9fa;    /* Фон */
+    --color-secondary-bg: #e6e8ea;  /* Заголовки */
+    --color-text: #333333;          /* Текст */
+    --color-light-bg: #ffffff;      /* Фон блоків */
+    --color-border: #d4d8db;        /* Рамки */
+    --color-placeholder: #f1f3f5;   /* Плейсхолдери */
+    --color-ok: #2e7d32;            /* Статус OK */
+    --color-warn: #b26a00;          /* Статус "демо" */
+}
+
+/* Загальні налаштування */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    padding-bottom: 50px; /* місце під фіксований футер */
+}
+
+/* Навігація */
+.navbar {
+    background-color: var(--color-primary);
+    color: var(--color-light-bg);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border-bottom: 4px solid var(--color-accent);
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.nav-menu a {
+    color: var(--color-light-bg);
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-menu a:hover {
+    color: var(--color-accent);
+}
+
+/* Заголовок + рядок статусу */
+.header {
+    padding: 20px;
+    background-color: var(--color-secondary-bg);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    color: var(--color-primary);
+}
+
+.subtitle {
+    margin-bottom: 12px;
+}
+
+/* Перемикач періоду */
+.period {
+    display: inline-flex;
+    border: 1px solid var(--color-primary);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.period button {
+    background-color: var(--color-light-bg);
+    color: var(--color-primary);
+    border: none;
+    padding: 5px 12px;
+    cursor: pointer;
+}
+
+.period button.active {
+    background-color: var(--color-primary);
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+.status-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 14px;
+}
+
+.status {
+    padding: 3px 10px;
+    border-radius: 12px;
+    color: var(--color-light-bg);
+    font-weight: bold;
+}
+
+.status-wait { background-color: #6c757d; }
+.status-ok   { background-color: var(--color-ok); }
+.status-demo { background-color: var(--color-warn); }
+
+#refresh-btn {
+    background-color: var(--color-primary);
+    color: var(--color-light-bg);
+    border: none;
+    border-radius: 4px;
+    padding: 5px 14px;
+    cursor: pointer;
+}
+
+#refresh-btn:hover {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+}
+
+/* Контейнер */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* KPI-картки (Grid) */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.kpi-card {
+    background-color: var(--color-primary);
+    color: var(--color-light-bg);
+    border-left: 6px solid var(--color-accent);
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.kpi-label {
+    font-size: 13px;
+    opacity: 0.85;
+}
+
+.kpi-value {
+    font-size: 26px;
+    color: var(--color-accent);
+}
+
+/* Блоки для графічних елементів */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.graph-block {
+    background-color: var(--color-light-bg);
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    min-width: 0;
+}
+
+.graph-block h2 {
+    font-size: 16px;
+    color: var(--color-primary);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.graph-block.wide {
+    grid-column: 1 / -1;
+}
+
+.chart-box {
+    position: relative;
+    height: 280px;
+}
+
+/* Зведення */
+.summary p {
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.summary strong {
+    color: var(--color-primary);
+}
+
+/* Етапи обробки (горизонтальні шкали) */
+.pipeline {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.stage-head {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.stage-bar {
+    height: 14px;
+    background-color: var(--color-placeholder);
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.stage-fill {
+    height: 100%;
+    background-color: var(--color-primary);
+    border-right: 4px solid var(--color-accent);
+}
+
+/* Матриця оцінки інформації (Grid) */
+.matrix {
+    display: grid;
+    grid-template-columns: 40px repeat(6, 1fr);
+    gap: 3px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.matrix div {
+    padding: 8px 0;
+    border-radius: 3px;
+}
+
+.matrix .axis {
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+.hint {
+    font-size: 12px;
+    margin-top: 8px;
+    color: #666666;
+    text-align: center;
+}
+
+/* Бейджі статусу в таблиці */
+.badge {
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.badge-new         { background-color: var(--color-secondary-bg); }
+.badge-processed   { background-color: #fff3a0; }
+.badge-generalized { background-color: var(--color-primary); color: var(--color-light-bg); }
+
+/* Карта */
+#map {
+    height: 420px;
+    border-radius: 4px;
+    border: 1px solid var(--color-border);
+}
+
+.mil-icon {
+    background: none;
+    border: none;
+}
+
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Таблиця */
+.table-wrap {
+    max-height: 320px;
+    overflow-y: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    background-color: var(--color-primary);
+    color: var(--color-light-bg);
+    text-align: left;
+    padding: 8px;
+}
+
+td {
+    padding: 8px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--color-placeholder);
+}
+
+tbody tr:hover {
+    background-color: #fff6b3;
+}
+
+/* Футер */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-primary);
+    color: var(--color-light-bg);
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    z-index: 1000;
+}
+
+/* Адаптивність */
+
+/* Середні екрани - KPI по 2 в рядок */
+@media screen and (max-width: 1199px) {
+    .kpi-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Мобільні пристрої - усе в один стовпчик */
+@media screen and (max-width: 599px) {
+    .container {
+        width: 100%;
+        padding: 16px;
+    }
+
+    .kpi-grid,
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    #map {
+        height: 300px;
+    }
+}
