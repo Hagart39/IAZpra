@@ -50,7 +50,7 @@
 # бекенд
 uvicorn main:app --reload --port 8000
 
-# фронтенд (у папці exam_2026)
+# фронтенд (у папці iaz_Da_boD)
 python -m http.server 5500
 # відкрити http://localhost:5500
 ```
